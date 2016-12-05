@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="blocChat">
+<html ng-app="sampleApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body >
+<body ng-controller="SampleCtrl">
     
     <ul>
-      <li></li>
+      <li ng-repeat="message in messages">{{ message.text }}</li>
     </ul>
     
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    
-    <!-- ui-router-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
@@ -36,7 +33,6 @@
   };
   firebase.initializeApp(config);
 </script>
-
     
 </body>
 </html>
