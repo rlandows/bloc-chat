@@ -1,9 +1,9 @@
 <section>
 <div class="sidebar">
    <h1 class="header">Rob Chat</h1>
-    <div>
-        <p> Hello</p>
-        <p ng-repeat="room in rooms"> {{room.name}}</p>
+    <div ng-repeat="room in home.rooms">
+        
+        <p> {{room.$id}}</p>
     
         
     </div>

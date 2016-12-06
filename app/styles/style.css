@@ -15,8 +15,8 @@ body {
    margin-left: 15px;
 }
 
-li {
-    list-style: none;
+p {
+    margin-left: 15px;
     color: gray;
 }
 
