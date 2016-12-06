@@ -1,8 +1,22 @@
-
-var app = angular.module("sampleApp", ["firebase"]);
-app.controller("SampleCtrl", function($scope, $firebaseArray) {
-  var ref = firebase.database().ref().child("messages");
-  // create a synchronized array
-  // click on `index.html` above to see it used in the DOM!
-  $scope.messages = $firebaseArray(ref);
-});
+(function() {
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+        });
+        
+        $stateProvider
+            .state('home', {
+            url: '/',
+            controller: 'HomeCtrl as home',
+            templateUrl: '/templates/home.html',
+            
+        });
+    }
+    angular
+            .module('blocChat', ['ui.router', 'firebase'])
+            .config(config);
+    
+    
+})();

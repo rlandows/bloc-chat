@@ -1,0 +1,25 @@
+body {
+    font-family: "Open Sans";
+}
+
+.sidebar {
+    position:absolute;
+    width: 250px;
+    background-color:#E8E8E8;
+    height:1000px;
+    left:0;
+    top:0;
+}
+
+.sidebar .header {
+   margin-left: 15px;
+}
+
+li {
+    list-style: none;
+    color: gray;
+}
+
+.header {
+    
+}

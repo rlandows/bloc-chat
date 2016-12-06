@@ -1,23 +1,22 @@
-var app = angular.module('blocChat', ['ui.router', 'firebase'])
-
-app.config(function($stateProvider, $locationProvider) {
-    $locationProvider
+(function() {
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
             .html5Mode({
                 enabled: true,
                 requireBase: false
         });
-    
-    $stateProvider 
-            .state('index', {
+        
+        $stateProvider
+            .state('home', {
             url: '/',
-            templateUrl: 'index.html'
-        })
+            controller: 'HomeCtrl as home',
+            templateUrl: '/templates/home.html',
+            
+        });
     }
+    angular
+            .module('blocChat', ['ui.router', 'firebase'])
+            .config(config);
     
     
-})
-
-
-
-
-
+})();

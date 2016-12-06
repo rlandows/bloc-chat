@@ -1,38 +1,49 @@
 <!DOCTYPE html>
-<html ng-app="sampleApp">
+<html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
 </head>
-<body ng-controller="SampleCtrl">
+<body>
     
-    <ul>
-      <li ng-repeat="message in messages">{{ message.text }}</li>
-    </ul>
+    <ui-view></ui-view>
     
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+    <!-- ui-router-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+    
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDCRC8rJxSUFJ-f2V4PjCjIvjD9txb0K_I",
+        authDomain: "bloc-chat-aee4f.firebaseapp.com",
+        databaseURL: "https://bloc-chat-aee4f.firebaseio.com",
+        storageBucket: "bloc-chat-aee4f.appspot.com",
+        messagingSenderId: "277034301438"
+    };
+    firebase.initializeApp(config);
+    </script>
 
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    
+    
+    
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+   
     
     
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDCRC8rJxSUFJ-f2V4PjCjIvjD9txb0K_I",
-    authDomain: "bloc-chat-aee4f.firebaseapp.com",
-    databaseURL: "https://bloc-chat-aee4f.firebaseio.com",
-    storageBucket: "bloc-chat-aee4f.appspot.com",
-    messagingSenderId: "277034301438"
-  };
-  firebase.initializeApp(config);
-</script>
+
+
     
 </body>
 </html>
