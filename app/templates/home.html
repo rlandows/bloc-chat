@@ -1,12 +1,17 @@
 <section>
 <div class="sidebar">
+    <div class = "title">
    <h1 class="header">Rob Chat</h1>
-    <div ng-repeat="room in home.rooms">
+        <div id = "addRoom">
+            <button type="button" class="btn btn-default btn-xs" ng-click="home.openModal()">Add Room</button>
+        </div>
+    </div>
+    <ul ng-repeat="room in home.rooms">
         
-        <p> {{room.$id}}</p>
+        <li> {{room.$value}}</li>
     
         
-    </div>
+    </ul>
 </div>
 
 </section>

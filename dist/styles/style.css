@@ -13,13 +13,19 @@ body {
 
 .sidebar .header {
    margin-left: 15px;
+   display: inline-block;
 }
 
-p {
-    margin-left: 15px;
+li {
+    left:0;
+    list-style:none;
     color: gray;
+    
 }
 
-.header {
+#addRoom {
+    position:relative;
+    margin-left: 38px;
+    margin-bottom: 5px;
     
 }

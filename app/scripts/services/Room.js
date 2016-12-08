@@ -6,6 +6,10 @@
     return {
         all: rooms
     };
+     
+    function addRoom(name) {
+        rooms.$add(name);
+    };
 }
 
 angular
