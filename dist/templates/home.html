@@ -1,17 +1,24 @@
 <section>
-<div class="sidebar">
+<div class="col-md-3 sidebar">
     <div class = "title">
    <h1 class="header">Rob Chat</h1>
         <div id = "addRoom">
             <button type="button" class="btn btn-default btn-xs" ng-click="home.openModal()">Add Room</button>
         </div>
     </div>
-    <ul ng-repeat="room in home.rooms">
+    <ul ng-repeat="room in home.rooms | orderBy: '$value'">
         
-        <li> {{room.$value}}</li>
+        <li ng-click="home.activeRoom(this)"> {{room.$value}}</li>
     
         
     </ul>
+</div>
+    
+<div class="col-md-9 chatRoom">
+    <h3>{{home.active.room.$value}}</h3>
+    <p ng-repeat="message in home.listOfMessages"> 
+    <strong>{{message.username}}</strong>: {{message.content}} <small>{{message.setAt}}</small>
+    </p>
 </div>
 
 </section>
