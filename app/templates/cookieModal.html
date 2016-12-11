@@ -1,0 +1,22 @@
+<div  tabindex="-1" role="dialog">
+  
+    
+      <div>
+    <div class="modal-header">
+    <h2 class="modal-title">Set a UserName</h2>
+        </div>
+    <div class="modal-body">
+<!-- ng-submit gives access to submitting with return key -->
+<form ng-submit="cookieModal.setUser(this)">
+    <label for="userInput">This Name will appear when you send messages</label>
+    <input id="userInput" autofocus ng-required="required" name="userInput" ng-model="cookieModal.user" ng-keydown="cookieModal.error=''">
+    <button class="btn btn-primary" type="submit">Set username</button>
+    </form>
+</div>
+    <div class="modal-footer">
+        <div class="error" ng-hide="!cookieModal.error">{{ cookieModal.error }} </div>
+   
+    </div>
+
+</div> 
+
