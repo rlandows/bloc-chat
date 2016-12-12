@@ -1,15 +1,17 @@
-<div  tabindex="-1" role="dialog">
+<div class="user-form"  tabindex="-1" role="dialog">
   
     
       <div>
     <div class="modal-header">
-    <h2 class="modal-title">Set a UserName</h2>
+    <h2 class="modal-title">Set a Username</h2>
         </div>
     <div class="modal-body">
-<!-- ng-submit gives access to submitting with return key -->
-<form ng-submit="cookieModal.setUser(this)">
-    <label for="userInput">This Name will appear when you send messages</label>
-    <input id="userInput" autofocus ng-required="required" name="userInput" ng-model="cookieModal.user" ng-keydown="cookieModal.error=''">
+
+<form ng-submit="cookieModal.setUser(this)" name="form" novalidate >
+    <label for="userInput">This Name will appear when you send messages </label>
+    <br/>
+    <input id="userInput" autofocus ng-required="required" name="userInput" ng-model="cookieModal.user" ng-keydown="cookieModal.error=''" required>
+    <br/>
     <button class="btn btn-primary" type="submit">Set username</button>
     </form>
 </div>

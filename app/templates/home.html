@@ -19,6 +19,22 @@
     <p ng-repeat="message in home.listOfMessages"> 
     <strong>{{message.username}}</strong>: {{message.content}} <small>{{message.setAt}}</small>
     </p>
+    
+    <div >
+    <div class="message-input">
+        <span>
+            <input type="text" class="form-control"  placeholder="Send your messages here..." id="newMessage" ng-model="home.newMessage">
+        </span>
+      <span class="input-group-btn">
+        <button class="btn btn-secondary"  id='message-button' type="button" ng-click='home.sendMessage(this)'>Go!</button>
+      </span>
+    </div>
+  </div>
 </div>
+    
+ 
+
+    
+    
 
 </section>
